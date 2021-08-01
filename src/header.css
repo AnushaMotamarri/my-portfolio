@@ -1,0 +1,22 @@
+.header_wrapper,.header_categories{
+    display: flex;
+    justify-content: space-between;
+}
+.header_wrapper{
+    padding: 15px;
+    border-bottom: solid black 0.5px;
+    cursor: pointer;
+    color: white;
+    background-color:black;
+    font-weight: bold;
+}
+.header_item{
+    margin-right: 25px;
+    color: white;
+    text-decoration: none !important;
+}
+
+.header_item:hover{
+    text-decoration: underline !important;
+    
+}

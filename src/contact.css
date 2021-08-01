@@ -1,0 +1,37 @@
+.contact-me-input{
+    height: 100px;
+    width: 600px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+.contact-box{
+    height: 300px;
+    width: 700px;
+    border: solid #ccc 1px;
+    border-radius: 5px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    box-shadow: 5px 10px #F5F5F5;
+
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.send-button{
+    margin-top: 20px;
+    
+    height: 30px;
+    
+}
+button{
+    border-radius: 15px;  
+    padding: 0 20px 0 20px;  
+}
+.contact_wrapper{
+    background-color: black;
+}
