@@ -4,6 +4,7 @@ import Professional from './professional';
 import Art from './art';
 import Writings from './writings';
 import Contact from './contact';
+import HomePage from './homePage'
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,23 +15,27 @@ export default function MySite() {
     return (
         <div>
              <Router>
-        <Header></Header>
        
         <Switch>
           <Route path="/professional">
+          <Header/>
             <Professional />
           </Route>
           <Route path="/art">
+          <Header/>
             <Art />
           </Route>
           <Route path="/writings">
+          <Header/>
             <Writings />
           </Route>
           <Route path="/contact">
+          <Header/>
             <Contact />
           </Route>
           <Route path="/">
-            <Professional />
+          <Header hideHeaderButtons={true}/>
+            <HomePage/>
           </Route>
         </Switch>
         </Router>

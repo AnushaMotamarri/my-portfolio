@@ -4,11 +4,12 @@
 }
 .header_wrapper{
     padding: 15px;
-    border-bottom: solid black 0.5px;
+    border-bottom: solid #253239 0.5px;
     cursor: pointer;
     color: white;
-    background-color:black;
+    background-color:#253237;
     font-weight: bold;
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
 }
 .header_item{
     margin-right: 25px;
