@@ -1,0 +1,15 @@
+.move-to-top-wrapper{
+    position: fixed;
+    top: 100%;
+    cursor: pointer;
+    left: 100%;
+    transform: translate(-130%,-130%);
+    border: solid brown 1px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color:brown;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.6);
+}
+.move-to-top-wrapper .move-icon{
+    color: white;
+}
