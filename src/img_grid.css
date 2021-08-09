@@ -90,7 +90,9 @@ margin-bottom: auto;
     justify-content: center;
 }
 .art_wrapper{
-    background-image: url('./images/Untitled\ design.png');
+    background: url('./images/background1.png') no-repeat center fixed ;
+    background-size: cover;
+    
 }
 @keyframes fadeInAnimationButton {
     0% {
