@@ -1,6 +1,6 @@
 import React from 'react'
-import {HeaderNames,HeaderDetails} from './enums'
-import './header.css'
+import {HeaderNames,HeaderDetails} from '../enums'
+import '../css/header.css'
 
 
 import {
@@ -8,7 +8,6 @@ import {
 
     Link
   } from "react-router-dom";
-  import logo from './images/logo.png'
 
 export default function Header({hideHeaderButtons=false}) {
     return (

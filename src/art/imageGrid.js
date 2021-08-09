@@ -1,6 +1,6 @@
 import React from 'react'
-import { useFirestore } from './hooks/useFirestore'
-import './img_grid.css'
+import { useFirestore } from '../hooks/useFirestore'
+import '../css/img_grid.css'
 export default function ImageGrid({setSelectedDoc}) {
     const {docs} = useFirestore('images')
     const handleClick=(doc)=>{

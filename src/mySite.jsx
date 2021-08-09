@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './header'
-import Professional from './professional';
-import Art from './art';
-import Writings from './writings';
-import Contact from './contact';
-import HomePage from './homePage'
+import Header from './header/header'
+import Professional from './profession/professional';
+import Art from './art/art';
+import Writings from './writings/writings';
+import Contact from './contact/contact';
+import HomePage from './homepage/homePage'
 import {
     BrowserRouter as Router,
     Switch,
