@@ -1,30 +1,31 @@
 .img-grid{
-    margin: 40px;
-    display: grid;
+    margin: 85px 40px 40px 40px;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-gap:40px;
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+   
 }
 
 .img-wrap{
     cursor: pointer;
     overflow: hidden;
-    height: 0;
     background: transparent;
-    padding: 50% 0;
     position: relative;
     opacity: 1;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 20px;
     animation: fadeInAnimationButton ease 2s ;
+    height: 350px;
+    width: 350px;
+    margin: 0 40px 40px 0;
+    box-shadow:1px 2px 2px rgba(0, 0, 0,0.3);
 }
-/* .img-wrap:hover{
-    opacity: 1;
-} */
-.img-wrap img{
-    height: 430px;
-    margin-top: -50%;
-    
+
+.img-wrap .single-img{
+    height: 400px;   
 }
 .img-wrap{
     transition: 0.6s ease-out;
@@ -34,8 +35,6 @@
     box-shadow:5px 7px 9px rgba(0, 0, 0,0.5);
     transition: 0.5s;
     transform: translateY(8px);
-    /* opacity: 0.8; */
-
 }
 .backdrop{
 position:fixed;
@@ -56,11 +55,10 @@ background: rgba(0, 0, 0,0.7);
     animation: fadeInAnimationButton 0.5s ease;
     cursor: pointer;
 }
-.backdrop .like-button{
+.backdrop .like-btn-wrap .like-button{
     display: flex;
     justify-content: center;
     position: relative;
-    /* margin-top: -63px; */
     padding: 20px;
     color: white;
     width: 65px;
@@ -69,18 +67,17 @@ background: rgba(0, 0, 0,0.7);
     opacity: 0;
     animation:fadeInAnimationButton 0.5s ease ;
 }
-.backdrop img:hover+.like-btn-wrap .like-button,.like-button:hover {
+.backdrop img:hover+.like-btn-wrap .like-button,.like-btn-wrap .like-button:hover {
    cursor: pointer;
    opacity: 1;
   
     transition: 0.5s;
     transform: translateY(-100%);
-    /* animation: bottomTop 0.5s; */
-
 }
 .num_likes{
 margin-top: auto;
 margin-bottom: auto;
+font-weight: bold;
 }
 .favorite{
     color: red;
@@ -89,11 +86,30 @@ margin-bottom: auto;
     display: flex;
     justify-content: center;
 }
-.art_wrapper{
-    background: url('../images/background.png') no-repeat center fixed ;
-    background-size: cover;
-    
+.like-btn{
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0,0.4);
+    opacity: 0;
+   
 }
+.unfavorite{
+    color:red
+}
+
+.img-wrap:hover .like-btn {
+opacity: 1;
+color: white;
+}
+
 @keyframes fadeInAnimationButton {
     0% {
         opacity: 0;
@@ -119,4 +135,19 @@ margin-bottom: auto;
         opacity: 1;
     }
     
+}
+
+.page_loading{
+position: absolute;
+top: 50%;
+left: 50%;
+
+}
+.page_loading img{
+
+height: 100px;
+transform: translate(-50%,-50%);
+}
+.art_wrapper{
+    margin-top: 70px;
 }
