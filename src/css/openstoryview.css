@@ -1,0 +1,22 @@
+.backdrop .full-story{
+    margin: 60px auto auto auto;
+    max-width: 50%;
+    max-height: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 3px;
+    
+}
+.story{
+    max-height: 63vh;
+    overflow: scroll;
+}
+.bottom-panel{
+    margin-top: -30px;
+    text-align: center;
+}
+.blog-card-like-button{
+    position: absolute;
+    bottom: 10px;
+    left: 92%;
+}
