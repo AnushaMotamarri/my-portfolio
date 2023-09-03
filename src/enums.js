@@ -1,4 +1,6 @@
-let HeaderNames = ['professional','art','writings','contact']
+let HeaderNames = [
+    /*'professional',*/
+'art','writings','contact']
 let HeaderDetails ={
     professional:{
         label:'Profession',
