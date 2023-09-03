@@ -1,27 +1,45 @@
-let HeaderNames = [
-    /*'professional',*/
-'art','writings','contact']
+let HeaderNames = ['professional','art','writings','contact']
 let HeaderDetails ={
-    professional:{
-        label:'Profession',
+    // professional:{
+    //     label:'Profession',
+    //     logo:'',
+    //     route:'/professional'
+    // },
+    home:{
+        label:'Home',
         logo:'',
-        route:'/professional'
+        route:'/home'
+    },
+    about:{
+        label:'About',
+        logo:'',
+        route:'/about'
     },
     art:{
-        label : 'Art Work ',
+        label : 'Work ',
         logo:'',
         route:'/art'
     },
+    commissions:{
+        label:'Commissions',
+        logo:'',
+        route:'/commissions/view'
+    },
+//    products:{
+//     label:'Products',
+//     logo:'',
+//     route:'/products'
+//    },
+    freebies:{
+        label:'Freebies',
+        logo:'',
+        route:'/freebies'
+    },
     writings:{
-        label:'Write Ups',
+        label:'Writings',
         logo:'',
         route:'/writings'
     },
-    contact:{
-        label:'Contact',
-        logo:'',
-        route:'/contact'
-    }
 
 }
 

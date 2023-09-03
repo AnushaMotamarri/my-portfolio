@@ -12,7 +12,7 @@ export default function HomePage() {
                 Welcome!
             </div>
             <div className="take-tour-button">
-            <Link to='/art' className="take-tour">Take A Tour <ChevronRightIcon/></Link>
+            <Link to='/home' className="take-tour">Take A Tour <ChevronRightIcon/></Link>
             </div>
             </div>
         </div>

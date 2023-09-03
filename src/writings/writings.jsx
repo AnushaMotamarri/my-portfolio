@@ -16,7 +16,7 @@ export default function Writings() {
         <div className="writing-page"> 
            <h1 className="page-heading">Thoughts</h1> 
            
-           <p>I am a recreational writer too. I write for fun, to express myself, and just to see my thoughts flow. If you are someone who is intrested in reading new perspectives, you are welcome :) </p>
+           {/* <p>I am a recreational writer too. I write for fun, to express myself, and just to see my thoughts flow. If you are someone who is intrested in reading new perspectives, you are welcome :) </p> */}
             
         </div>
         {docs.map(card=>(

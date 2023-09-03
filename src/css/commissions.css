@@ -1,0 +1,46 @@
+.page-content{
+    margin-top: 60px;
+    line-height: 1.75;
+    padding: 0 20px;
+}
+h1{
+    /* text-align: center; */
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+}
+.google_form_commission_request{
+    text-align: center
+}
+.align_center{
+    text-align: center
+}
+.commission_work_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.view_commission_work{
+    flex-basis: 33.33%;
+    margin-top: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    height: 500px;
+    overflow: hidden;
+}
+.view_commission_work img{
+    width: 100%;
+
+}
+/* .view_commission_work{
+    width: 450px;
+    height: 450px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+} */
+.img-wrap img{
+    width: 100%;
+}
+.cursor-pointer{
+    cursor: pointer;
+}

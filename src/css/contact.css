@@ -4,21 +4,27 @@
     background-color: #F5F5F5;
     border-radius: 10px;
 }
-.contact-box{
-    height: 300px;
-    width: 700px;
-    border: solid #ccc 1px;
-    border-radius: 5px;
-    position: absolute;
-    margin: auto;
-    top:0;
-    bottom: 0;
-    left:0;
-    right: 0;
-    box-shadow: 5px 10px #F5F5F5;
-
+.greetmsg,.description_about{
+    text-align: center;
+    line-height: 1.75;
+    margin: 40px;
+    animation: fadeInAnimationButton ease 0.5s;
 }
-.flex-center{
+.greetmsg{
+    font-size: 20px;
+}
+
+.contact_me_dp{
+    width: 200px;
+    height: 200px !important;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transform: translate(-50%,50px);
+    animation: fadeInAnimationButton ease 0.5s;
+}
+.flex-center{ 
     display: flex;
     justify-content: center;
 }
@@ -32,6 +38,24 @@ button{
     border-radius: 15px;  
     padding: 0 20px 0 20px;  
 }
+.social_media_contact_links{
+    text-align: center;
+}
+.social_media_icon{
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    cursor: pointer;
+  
+}
 .contact_wrapper{
-    background-color: black;
+    height: 100vh;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

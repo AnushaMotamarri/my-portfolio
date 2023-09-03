@@ -2,13 +2,12 @@ import React from 'react'
 import { useFirestore } from '../hooks/useFirestore'
 import '../css/img_grid.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import image from '../images/loading.gif'
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import LikeButton from './likeButton';
+import PageLoader from '../common_components/common_component';
+import DownloadButton from './downloadButton';
 
-export default function ImageGrid({setSelectedDoc}) {
-    const {docs} = useFirestore('images')
+export default function ImageGrid({setSelectedDoc,collectionName='images',imageUrlKey='url',showLikeButton=true,showDownloadButton}) {
+    const {docs} = useFirestore(collectionName)
     const handleClick=(doc)=>{
         setSelectedDoc(doc)
     }
@@ -18,17 +17,19 @@ export default function ImageGrid({setSelectedDoc}) {
              <>
                 <div className="img-wrap" key={doc.id} onClick={()=>handleClick(doc)}>
                     <LazyLoadImage
-                        threshold={1000}
-                        src={doc.url}
-                        className="single-img"
+                        threshold={500}
+                        src={doc[imageUrlKey]}
+                        className="single-img" 
                         />
-                    <LikeButton selectedDoc={doc} wrapperClassName={"like-btn"}/>
+                   { showLikeButton&&<LikeButton selectedDoc={doc} wrapperClassName={"like-btn"}/>}
+                   {showDownloadButton&&<DownloadButton selectedDoc={doc} wrapperClassName={"like-btn"}/>}
+
                 </div>
                
                 </>
             ))}
         </div>:
-        <div className="page_loading"><img src={image}/></div>
+        <PageLoader/>
     )
 }
 
