@@ -17,10 +17,10 @@ export default function MySite() {
              <Router>
        
         <Switch>
-          <Route path="/professional">
+          {/* <Route path="/professional">
           <Header/>
             <Professional />
-          </Route>
+          </Route> */}
           <Route path="/art">
           <Header/>
             <Art />
