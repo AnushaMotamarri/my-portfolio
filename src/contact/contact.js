@@ -10,19 +10,19 @@ export default function Contact() {
            
         <div className="contact-box">
             <img className="contact_me_dp" src={aboutDP}></img>
-            <div className="greetmsg"><i><b>Hi, I am Anusha Motamarri, nice to meet you!</b></i></div>
-            <div className="description_about">I am a freelance illustrator based in Hyderabad,India. I am a software engineer by profession. But by heart, I am an artist. 
-                I am a hobby writer too.
-                I think I started drawing before even I knew ABCD. My mom tells me that I used to keep drawing circles on every piece of paper I found in the house. Yeah, Those were the first drawings I ever made 😉
-                 . My father is a self-taught artist by hobby. He is a constant inspiration to me. 
-                 For a long time, I left art aside because of academic pressure. But during the pandemic, I revived my hobbies and art is one of them.
-                I accept commssioned portraits, artworks for birthdays, weddings, housewarming, or for any other events.
-               This platform is a place where I will be posting all my artworks. For further information and any kind of queries or concerns contact <b>motamarrianusha01@gmail.com</b>.
-                </div> 
-            <div className="social_media_contact_links">
-            <a href="https://www.instagram.com/the_blunt_brush/" target="_blank"><img className = "social_media_icon" title="Instagram" src={instagramIcon}></img></a>
-            <a href="https://www.behance.net/motamarrianusha" target="_blank"><img  className = "social_media_icon" title="Behance" src={behanceIcon}></img></a>
+            <div className="greetmsg"><i><b>Hi, I am Anusha Motamarri, nice to meet you! </b></i> 😊</div>
+            <div className='contact-card'>
+                <div className="description_about">I am a freelance illustrator based in <b>Hyderabad,India</b>. Professionally, I’m a <b>software engineer</b>, but at heart—I’m an artist. 
+                    <br></br>I think I started drawing even before I learned the ABCs. My mom tells me I used to scribble circles on every piece of paper I could find around the house—those were probably my first-ever drawings 😊.<br></br> Art runs in the family—my dad is a self-taught artist and a constant source of inspiration. 
+                    While academics took over for a while, the pandemic gave me the chance to reconnect with my creative side, and since then, art has been an inseparable part of my life again. I’m also a hobby writer and enjoy expressing myself through both words and visuals.
+                    Through this platform, I’ll be sharing all my recent artwork—from personal projects to commissioned pieces.I take orders for <b>custom portraits</b> and artwork for <b>birthdays</b>,<b>weddings</b>, <b>housewarmings</b>, and any other special events. For collaborations, commissions, or any queries, feel free to reach out:  📩 motamarrianusha01@gmail.com.
+                    </div> 
+                <div className="social_media_contact_links">
+                <a href="https://www.instagram.com/the_blunt_brush/" target="_blank"><img className = "social_media_icon" title="Instagram" src={instagramIcon}></img></a>
+                <a href="https://www.behance.net/motamarrianusha" target="_blank"><img  className = "social_media_icon" title="Behance" src={behanceIcon}></img></a>
+                </div>
             </div>
+            
         </div>
         </div>
     )

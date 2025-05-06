@@ -13,17 +13,19 @@ export default function Writings() {
     }
     return (
         <div className="blog-wrapper">
-        <div className="writing-page"> 
-           <h1 className="page-heading">Thoughts</h1> 
-           
-           {/* <p>I am a recreational writer too. I write for fun, to express myself, and just to see my thoughts flow. If you are someone who is intrested in reading new perspectives, you are welcome :) </p> */}
+            <div className="writing-page-container"> 
+            <h1 className="page-heading">Thoughts</h1> 
             
-        </div>
-        {docs.map(card=>(
-            <StoryCard card={card} setSelectedStory={setSelectedStory}/>
-        ))}
+            <p  className='mt-10'>I’m a recreational writer—I write purely for the joy of it. It’s my way of expressing myself and watching my thoughts take shape on the page. If you enjoy exploring new perspectives and heartfelt reflections, you’re more than welcome to read along. 😊 </p>
+                
+            <section className='story-cards'>
+                {docs.map(card=>(
+                <StoryCard card={card} setSelectedStory={setSelectedStory}/>
+            ))}
+            </section>
+       
         {selectedStory&&<OpenStoryView selectedStory={selectedStory} handleClose={handleClose}/>}
-            
+        </div>
         </div>
     )
 }

@@ -7,21 +7,24 @@
 .greetmsg,.description_about{
     text-align: center;
     line-height: 1.75;
-    margin: 40px;
+    margin: 20px 40px;
     animation: fadeInAnimationButton ease 0.5s;
 }
 .greetmsg{
     font-size: 20px;
 }
-
+.contact-card{
+    border: 1px solid #ccc;
+    border-style: dashed;
+    border-radius: 5px;
+    max-width: 850px;
+    margin: 0 20px;
+}
 .contact_me_dp{
     width: 200px;
     height: 200px !important;
     border-radius: 50%;
-    margin-left: 50%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    transform: translate(-50%,50px);
+   
     animation: fadeInAnimationButton ease 0.5s;
 }
 .flex-center{ 
@@ -42,14 +45,15 @@ button{
     text-align: center;
 }
 .social_media_icon{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin: 10px;
     cursor: pointer;
   
 }
 .contact_wrapper{
-    height: 100vh;
+    height: 90vh;
+    margin-top: 70px;
 }
 @keyframes fadeInAnimation {
     0% {
@@ -58,4 +62,10 @@ button{
     100% {
         opacity: 1;
      }
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

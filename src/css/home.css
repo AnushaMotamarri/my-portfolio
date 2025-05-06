@@ -5,9 +5,7 @@
     padding: 0;
     box-sizing: border-box
 }
-.landing_page_container{
-    background-image: url('../images/patterns.png')
-}
+
 .home_page_logo{
     width: 100%;
 }
@@ -36,10 +34,10 @@
         border: 0;
         text-decoration: none;
         border-radius: 15px;
-        background-color: rgba(255,255,255,0.1);
-        border: 1px solid rgba(255,255,255,0.1);
+        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.5);
         backdrop-filter: blur(30px);
-        color: rgba(255,255,255);
+        color: 333;
         font-size: 14px;
         letter-spacing: 2px;
         cursor: pointer;
@@ -48,7 +46,7 @@
      
 }
 .landing_page__cta:hover,.blog-post__cta:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.7);
   }
 @keyframes fadeIn{
     from{
@@ -103,7 +101,7 @@
     letter-spacing: 3.5px;
 }
 .blog-post__text{
-    line-height: 1.29;
+    line-height: 1.5;
 }
 
 @media screen and (max-width:868px){
@@ -120,9 +118,7 @@
     .blog-post__title{
         text-align: center
     }
-    .blog-post__cta{
-        /* text-align: center */
-    }
+   
     .landing_page__text{
         font-size: 20px;
     }

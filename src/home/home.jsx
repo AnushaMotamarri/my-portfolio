@@ -1,50 +1,45 @@
 import React from 'react'
 import homePageImage from '../images/home_page_logo2.jpeg';
+import freebiesImage from '../images/lord_krishna.jpeg';
+import commissionsImage from '../images/commissions.png';
+import workImage from '../images/work.png';
+import writingsImage from '../images/abdulkalam.png'
 import '../css/home.css'
 import {useNavigate} from 'react-router';
 function Home() {
     const navigate = useNavigate()
     let cardDetails = [{
-        imgUrl:'',
+        imgUrl:freebiesImage,
         heading:'Work',
-        text:'I started scribbling since the time I knew how to hold a pen.  There have been a number of sketchbooks I maintained since then. But our family has been a nomad. I have lost all those sketchbooks while switching between the houses. I regret not taking a special care of them. Since then I make sure to take a picture of every sketch I made. I wanted to have a dedicated space, where I can preserve all my work. So, here I am showcasing all the work I had done in the recent past.',
+        text:'I\'ve been scribbling since I first learned how to hold a pen. Over the years, I\'ve filled countless sketchbooks with my drawings. But growing up in a nomadic family meant frequent moves—and along the way, I lost all of those sketchbooks.I deeply regret not taking special care of them. That loss taught me something important: to preserve every piece I create. Now, I make sure to photograph each sketch I make.This website is my dedicated space—a personal gallery to showcase and preserve all the work I\'ve created in recent years.',
         showOrderButton:false,
         showViewButton:true,
         color:'#D7EEFF',
         route:'/art'
     },
     {
-        imgUrl:'',
+        imgUrl:commissionsImage,
         heading:'Commissions',
-        text:' Back in college, I first got a request from a Facebook friend to illustrate their father’s portrait. This concept of sketching for someone and getting paid for it is very new for me then. I denied to charge her, but I consider myself lucky to have got a client who insisted me charge her. Seeing that work, many friends in the college wanted me to sketch a portrait of them or gift a portrait to their loved ones. Since then I have been taking orders for commissioned work. More details inside.',
+        text:'It all began back in college, when a Facebook friend asked me to illustrate a portrait of her father. The idea of creating art for someone—and being paid for it—was entirely new to me. I initially refused to charge her, but she insisted, and I consider myself lucky to have had such a thoughtful first client.That portrait sparked something. Soon, more friends from college reached out, asking for custom sketches—some for themselves, others as heartfelt gifts for their loved ones.Since then, I’ve been happily accepting commissions and creating personalized artwork.',
         showOrderButton:true,
         showViewButton:true,
         color:'#D6EADF',
         orderRoute:'/commissions/order',
         route:'/commissions/view'
     },
-    // {
-    //     imgUrl:'',
-    //     heading:'Products',
-    //     text:'orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently.',
-    //     showOrderButton:false,
-    //     showViewButton:false,
-    //     showCheckoutButton:true,
-    //     color:'#E6C6FF'
-    // },
     {
-        imgUrl:'',
+        imgUrl:workImage,
         heading:'Freebies',
-        text:"Here is some free artwork available for you to download. These are printable as they are available in high resolution formats. So you can print them and have them hung to the wall or you can use them as ur mobile / desktop wallpapers. Let me know if you would like to get any of my other artwork as downloadable work. You can mail me on motamarrianusha01@gmail.come or DM me on my Instagram page mentioned mentioned in the About page. ",
+        text:"Here’s a collection of free artwork available for you to download and enjoy. All pieces are in high-resolution formats—perfect for printing and framing, or for using as wallpapers on your mobile or desktop.If you\'d like to see any of my other artwork made available for download, feel free to reach out!You can email me at motamarrianusha01@gmail.com or send me a DM on Instagram (details on the About page).",
         showOrderButton:false,
         showViewButton:true,
         color:'#F6D0E8', 
         route:'/freebies'
     },
     {
-        imgUrl:'',
+        imgUrl:writingsImage,
         heading:'Writings',
-        text:"I have never been expressive verbally since childhood. Writing and art are the only tools I often use to vent out my unexpressed emotions. I am not a great writer, in fact not even close to that. But writing and art gives my heart immense joy. In a way Its therapeutic. For the longest time I have hidden my writings from everyone. I never let anyone know that I write with the fear of judgement. But not anymore as I know the WHY of my writings. It is a part of me and my being. Welcome to my thoughts and the short stories.",
+        text:"I've never been very expressive when it comes to speaking. Since childhood, writing and art have been my safe spaces—ways to let out the emotions I often couldn’t voice. I don’t consider myself a great writer—not even close—but writing brings me immense joy. It’s therapeutic. For the longest time, I kept my writings hidden, afraid of being judged. But not anymore. I now understand why I write. It’s a part of who I am—a reflection of my inner world.Welcome to my thoughts, my stories, and everything in between.",
         showOrderButton:false,
         showViewButton:true,
         color:'#E0D7FF',
@@ -70,7 +65,7 @@ function Home() {
             {cardDetails.map(card=>
                 <div className="blog-post" style={{backgroundColor:card.color}}>
                 <div className="blog-post__img">
-                    <img src={homePageImage}></img>
+                    <img src={card.imgUrl}></img>
 
                 </div>
 
