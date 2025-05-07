@@ -11,9 +11,10 @@ import {
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-export default function Header({hideHeaderButtons=false}) {
+export default function Header() {
     const navigate=useNavigate();
-    const [darkMode,setIsDarkMode] = useState(false);
+    const [darkMode,setIsDarkMode] = useState(localStorage.getItem("theme")==="dark");
+    console.log(darkMode)
     const [selectedTab,setSelectedTab] = useState('home');
     const {pathname} = useLocation();
     const [isMenuClicked,setIsMenuClicked] = useState(false);
@@ -42,30 +43,41 @@ export default function Header({hideHeaderButtons=false}) {
     }, [pathname]);
     const setDarkMode =()=>{
         setIsDarkMode(true);
-        document.querySelector('body').setAttribute('data-theme','dark')
+        localStorage.setItem("theme","dark")
+        
     }
     const setLightMode =()=>{
         setIsDarkMode(false);
-        document.querySelector('body').setAttribute('data-theme','light')
+        localStorage.setItem("theme","light")
+
+        
     }
     const toggleTheme = (isDarkTheme) =>{
         isDarkTheme?setDarkMode():setLightMode()
     }
+    useEffect(()=>{
+        if(darkMode){
+            document.querySelector('body').setAttribute('data-theme','dark')
+        }
+        else{
+            document.querySelector('body').setAttribute('data-theme','light')
+        }
+    },[darkMode])
     return (
         <div className="header_wrapper">
            <div to="/" className="header_item">Anusha</div> 
            <div className='display-flex'>
            {!darkMode&&<DarkModeIcon onClick={()=>toggleTheme(true)}/>}
             {darkMode&& <LightModeIcon onClick={()=>toggleTheme(false)}/>}
-            {!hideHeaderButtons&& <div className="header_categories">
+             <div className="header_categories">
                 {(Object.keys(HeaderDetails)||[]).map((name)=>{
                     return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
                         { HeaderDetails[name].label}
                     </div>
 
                 })}
-            </div>}
-            {!hideHeaderButtons&&isMenuClicked&& <div className="header_categories_hamburger">
+            </div>
+            {isMenuClicked&& <div className="header_categories_hamburger">
                 {(Object.keys(HeaderDetails)||[]).map((name)=>{
                     return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
                         { HeaderDetails[name].label}

@@ -113,6 +113,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: .8rem;
     box-shadow: var(--primary-box-shadow);
    /* border-radius: 8rem; */
 }

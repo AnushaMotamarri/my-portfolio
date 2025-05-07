@@ -3,7 +3,6 @@ import Professional from './profession/professional';
 import Art from './art/art';
 import Writings from './writings/writings';
 import Contact from './contact/contact';
-import HomePage from './homepage/homePage'
 import {
     BrowserRouter,useRoutes
   } from "react-router-dom";
@@ -18,8 +17,7 @@ const routesConfig = [
     path: '/',
     element: <Layout />,
     children: [
-      { index: true, element: <HomePage /> }, 
-      { path: 'home', element: <Home /> },
+      { index: true, element: <Home /> }, 
       { path: 'professional', element: <Professional /> },
       { path: 'art', element: <Art /> },
       { path: 'freebies', element: <Freebies /> },
