@@ -1,102 +1,45 @@
 import React from 'react'
-import Header from './header/header'
 import Professional from './profession/professional';
 import Art from './art/art';
 import Writings from './writings/writings';
 import Contact from './contact/contact';
 import HomePage from './homepage/homePage'
 import {
-  
-    BrowserRouter as Router,
-    Route,
-    Routes
-    
+    BrowserRouter,useRoutes
   } from "react-router-dom";
 import Home from './home/home';
 import OrderCommission from './commissions/order/order_commission';
 import ViewCommissions from './commissions/view/view_commissions';
 import Freebies from './freebies/freebies';
 import Products from './products/products';
-export default function MySite() {
-    return (
-        <Router>
-          <Routes>
-            <Route path="/home" element={
-            <>
-             <Header/>
-            <Home /></>
-           
-          }>
-              
-              </Route>
-            <Route path="/professional" element={
-              <>
-              <Header/>
-                          <Professional />
-              </>
-            }
-           
-            >
-              
-              </Route>
-            <Route path="/art" element={
-                <>
-                <Header/>
-                <Art />
-                </>
-                }>
-            </Route>
-            <Route path="/freebies" element={
-              <>
-              <Header/>
-              <Freebies />
-              </>
-            }></Route>
-            <Route
-            path="/products" 
-            element={
-              <>
-              <Header/>
-              <Products/>
-              </>
-            }
-            />
-            <Route path="/writings" element={
-              <>
-               <Header/>
-               <Writings />
-              </>
-              
-            }>
-             
-            </Route>
-            <Route path="/about" element={
-              <>
-              <Header/>
-              <Contact />
-              </>
-            }>
-              
-            </Route>
-            <Route path="/commissions/order" element={<><Header/><OrderCommission/></>}>
-
-            </Route>
-            <Route path="/commissions/view" element={<><Header/><ViewCommissions/></>}>
-
-            </Route>
-            <Route path="/"  
-            
-            element={
-              <>
-             <Header hideHeaderButtons={true}/>
-              <HomePage/>
-              </>}
-            >
-              
-            </Route>
-          
-          </Routes>
- 
-        </Router>
-    )
+import Layout from './layout/layout';
+const routesConfig = [
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <HomePage /> }, 
+      { path: 'home', element: <Home /> },
+      { path: 'professional', element: <Professional /> },
+      { path: 'art', element: <Art /> },
+      { path: 'freebies', element: <Freebies /> },
+      { path: 'products', element: <Products /> },
+      { path: 'writings', element: <Writings /> },
+      { path: 'about', element: <Contact /> },
+      { path: 'commissions/order', element: <OrderCommission /> },
+      { path: 'commissions/view', element: <ViewCommissions /> },
+    ]
+  }
+];
+function AppRoutes() {
+  const routes = useRoutes(routesConfig);
+  return routes;
 }
+export default function MySite() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
+
