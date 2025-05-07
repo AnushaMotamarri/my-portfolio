@@ -41,7 +41,7 @@
 }
 h2{
     text-align: center;
-    color: black
+    color: var(--primary-text-color)
 }
 .google-sign-in{
     position: absolute;

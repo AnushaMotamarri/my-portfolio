@@ -43,6 +43,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+
 background: rgba(0, 0, 0,0.7);
 }
 .backdrop img{
@@ -86,6 +87,11 @@ font-weight: bold;
 .like-btn-wrap{
     display: flex;
     justify-content: center;
+}
+.like-button{
+    display: flex;
+    justify-content: end;
+    margin: 10px 0;
 }
 .like-btn{
    

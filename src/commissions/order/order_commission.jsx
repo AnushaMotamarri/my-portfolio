@@ -33,7 +33,6 @@ function OrderCommission() {
    
    
     const navigate = useNavigate();
-    const [showForm, setShowForm] = useState(false);
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

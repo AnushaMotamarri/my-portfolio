@@ -1,8 +1,7 @@
 import React from 'react'
 import LikeButton from '../art/likeButton'
 import './openstoryview.css'
-// import  ReactHtmlParser from 'react-html-parser'
-// import parse from 'html-react-parser';
+
 
 export default function OpenStoryView({selectedStory,handleClose}) {
     return (
@@ -12,9 +11,9 @@ export default function OpenStoryView({selectedStory,handleClose}) {
                 <p className="story">
                     {selectedStory.description ||selectedStory.summary}
                 </p>
+                <LikeButton selectedDoc={selectedStory} type={'blog'} wrapperClassName={'bottom-panel'} />
+
             </div>
-            <div></div>
-            <LikeButton selectedDoc={selectedStory} type={'blog'} wrapperClassName={'bottom-panel'} />
         </div> 
     ) 
 }  
