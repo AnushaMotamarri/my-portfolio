@@ -1,35 +1,21 @@
 let HeaderNames = ['professional','art','writings','contact']
 let HeaderDetails ={
-    // professional:{
-    //     label:'Profession',
-    //     logo:'',
-    //     route:'/professional'
-    // },
+    
     home:{
         label:'Home',
         logo:'',
         route:'/home'
-    },
-    about:{
-        label:'About',
-        logo:'',
-        route:'/about'
-    },
-    art:{
-        label : 'Work ',
-        logo:'',
-        route:'/art'
     },
     commissions:{
         label:'Commissions',
         logo:'',
         route:'/commissions/view'
     },
-//    products:{
-//     label:'Products',
-//     logo:'',
-//     route:'/products'
-//    },
+    art:{
+        label : 'Work ',
+        logo:'',
+        route:'/art'
+    },
     freebies:{
         label:'Freebies',
         logo:'',
@@ -40,7 +26,11 @@ let HeaderDetails ={
         logo:'',
         route:'/writings'
     },
-
+    about:{
+        label:'About',
+        logo:'',
+        route:'/about'
+    },
 }
 
 export {

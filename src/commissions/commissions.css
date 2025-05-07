@@ -13,8 +13,10 @@
     margin: 10px 0px;
     background-color: #eee;
 }
+h4{
+    margin: 10px 0;
+}
 h1{
-    /* text-align: center; */
     text-transform: uppercase;
     letter-spacing: 3.5px;
 }

@@ -68,3 +68,6 @@ background-color: #F5F5F5;
 .story-title-container{
     flex: 1;
 }
+h1,h2{
+    margin: 0 10px;
+}

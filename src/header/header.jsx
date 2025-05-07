@@ -7,6 +7,7 @@ import {
   } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+
 export default function Header({hideHeaderButtons=false}) {
     const navigate=useNavigate();
     const [selectedTab,setSelectedTab] = useState('home');
@@ -45,11 +46,6 @@ export default function Header({hideHeaderButtons=false}) {
                   </div>
 
               })}
-              {/* <div className={`header_item header_item_signIn`}>
-                  <SignIn/>
-              </div> */}
-           
-              
            </div>}
            {!hideHeaderButtons&&isMenuClicked&& <div className="header_categories_hamburger">
               {(Object.keys(HeaderDetails)||[]).map((name)=>{
