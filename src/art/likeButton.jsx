@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import {updateFirestore} from '../hooks/useFirestore'
 export default function LikeButton({selectedDoc, wrapperClassName,type='images'}) {
     const [isFavorite,setIsFavorite] = useState(localStorage.getItem(selectedDoc.id) === 'true')

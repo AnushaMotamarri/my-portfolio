@@ -5,9 +5,10 @@ import {useLocation} from 'react-router';
 import { 
     useNavigate
   } from "react-router-dom";
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+  import MenuIcon from '@mui/icons-material/Menu';
+  import CloseIcon from '@mui/icons-material/Close';
 
+// import DarkModeIcon from '@mui/icons-material/DarkMode';
 export default function Header({hideHeaderButtons=false}) {
     const navigate=useNavigate();
     const [selectedTab,setSelectedTab] = useState('home');

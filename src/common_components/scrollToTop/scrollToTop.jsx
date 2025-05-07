@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import './moveToTop.css'
 export const ScrollToTop = () => {
     const [visible,setVisible]= useState(false)
