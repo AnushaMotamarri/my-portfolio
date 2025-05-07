@@ -7,9 +7,12 @@ export default function Layout() {
   const hideHeader = location.pathname === '/';
 
   return (
-    <>
+    <div className='display-flex'>
       <Header hideHeaderButtons={hideHeader} />
-      <Outlet />
-    </>
+      <div className='page-main-content-outlet'>
+        <Outlet />
+      </div>
+      
+    </div>
   );
 }

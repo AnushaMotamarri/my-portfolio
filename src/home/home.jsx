@@ -4,7 +4,7 @@ import homePageImage from '../images/home_page_logo2.jpeg';
 // import commissionsImage from '../images/commissions.png';
 // import workImage from '../images/work.png';
 // import writingsImage from '../images/abdulkalam.png'
-import '../css/home.css'
+import './home.css'
 import {useNavigate} from 'react-router';
 function Home() {
     const navigate = useNavigate()

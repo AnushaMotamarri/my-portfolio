@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import ImageGrid from '../art/imageGrid';
+import ImageGrid from '../common_components/imageGrid/imageGrid';
 function Freebies() {
     const [selectedDoc,setSelectedDoc] = useState(null)
 

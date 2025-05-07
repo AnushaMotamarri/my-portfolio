@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../css/home_page.css'
+import './home_page.css'
 
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 export default function HomePage() {

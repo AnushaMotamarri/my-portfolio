@@ -1,6 +1,6 @@
 import React from 'react'
 import LikeButton from '../art/likeButton'
-import '../css/openstoryview.css'
+import './openstoryview.css'
 import  ReactHtmlParser from 'react-html-parser'
 export default function OpenStoryView({selectedStory,handleClose}) {
     return (

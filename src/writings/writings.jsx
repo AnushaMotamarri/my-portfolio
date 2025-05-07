@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import '../css/writing.css'
+import './writing.css'
 import { useFirestore } from '../hooks/useFirestore'
 import StoryCard from './storyCard' 
 import OpenStoryView from './openStoryView'

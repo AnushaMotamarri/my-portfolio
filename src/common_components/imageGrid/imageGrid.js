@@ -1,10 +1,10 @@
 import React from 'react'
-import { useFirestore } from '../hooks/useFirestore'
-import '../css/img_grid.css'
+import { useFirestore } from '../../hooks/useFirestore'
+import './img_grid.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import LikeButton from './likeButton';
-import PageLoader from '../common_components/common_component';
-import DownloadButton from './downloadButton';
+import LikeButton from '../../art/likeButton';
+import PageLoader from '../common_component';
+import DownloadButton from '../../art/downloadButton';
 
 export default function ImageGrid({setSelectedDoc,collectionName='images',imageUrlKey='url',showLikeButton=true,showDownloadButton}) {
     const {docs} = useFirestore(collectionName)

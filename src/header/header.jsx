@@ -1,11 +1,10 @@
 import React,{useState,useEffect} from 'react'
-import {HeaderNames,HeaderDetails} from '../enums'
-import '../css/header.css'
+import {HeaderDetails} from '../enums'
+import './header.css'
 import {useLocation} from 'react-router';
 import { 
     useNavigate
   } from "react-router-dom";
-import SignIn from './SignIn';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 export default function Header({hideHeaderButtons=false}) {

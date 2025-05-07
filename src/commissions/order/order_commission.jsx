@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import '../../css/commissions.css'
+import '../commissions.css'
 import { useNavigate } from 'react-router';
 import { content } from './config';
 

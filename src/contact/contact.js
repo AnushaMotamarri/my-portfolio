@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import '../css/contact.css'
+import React from 'react'
+import './contact.css'
 import aboutDP from '../images/aboutDP.png'
 import instagramIcon from  '../images/Instagram_icon.png';
 import behanceIcon from  '../images/behance_logo.png';
