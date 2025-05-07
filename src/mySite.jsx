@@ -12,6 +12,7 @@ import ViewCommissions from './commissions/view/view_commissions';
 import Freebies from './freebies/freebies';
 import Products from './products/products';
 import Layout from './layout/layout';
+import NotFound from './layout/notFound';
 const routesConfig = [
   {
     path: '/',
@@ -26,6 +27,7 @@ const routesConfig = [
       { path: 'about', element: <Contact /> },
       { path: 'commissions/order', element: <OrderCommission /> },
       { path: 'commissions/view', element: <ViewCommissions /> },
+      { path: '*', element: <NotFound /> }
     ]
   }
 ];
