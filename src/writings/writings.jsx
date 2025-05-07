@@ -16,7 +16,7 @@ export default function Writings() {
             <div className="writing-page-container"> 
             <h1 className="page-heading">Thoughts</h1> 
             
-            <p  className='mt-10'>I’m a recreational writer—I write purely for the joy of it. It’s my way of expressing myself and watching my thoughts take shape on the page. If you enjoy exploring new perspectives and heartfelt reflections, you’re more than welcome to read along. 😊 </p>
+            <p  className='section-description'>I’m a recreational writer—I write purely for the joy of it. It’s my way of expressing myself and watching my thoughts take shape on the page. If you enjoy exploring new perspectives and heartfelt reflections, you’re more than welcome to read along. 😊 </p>
                 
             <section className='story-cards'>
                 {docs.map(card=>(

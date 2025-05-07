@@ -1,10 +1,10 @@
-import GetAppIcon from '@material-ui/icons/GetApp';
+import GetAppIcon from '@mui/icons-material/GetApp';
 import React from 'react'
-const axios = require('axios');
+import axios from 'axios';
+
 
 function DownloadButton({selectedDoc, wrapperClassName}) {
     function download(source){
-        console.log("downloading");
     axios(source,
     {
         method:'GET',

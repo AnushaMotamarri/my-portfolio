@@ -4,7 +4,7 @@ let HeaderDetails ={
     home:{
         label:'Home',
         logo:'',
-        route:'/home'
+        route:'/'
     },
     commissions:{
         label:'Commissions',

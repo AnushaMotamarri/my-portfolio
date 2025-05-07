@@ -1,3 +1,4 @@
+
 .contact-me-input{
     height: 100px;
     width: 600px;
@@ -54,6 +55,8 @@ button{
 .contact_wrapper{
     height: 90vh;
     margin-top: 70px;
+    color: var(--primary-text-color);
+
 }
 @keyframes fadeInAnimation {
     0% {

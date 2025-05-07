@@ -13,10 +13,10 @@
     width: 100%;
     z-index: 2;
    top: 0px;
-    border-bottom: #A3BFF3;
+    border-bottom: var(--header-background-color);
     cursor: pointer;
     color: white;
-    background-color:#A3BFF3;
+    background-color:var(--header-background-color);
     font-weight: bold;
     font-family: 'Roboto','Helvetica','Arial',sans-serif;
 }
@@ -41,7 +41,7 @@
 }
 h2{
     text-align: center;
-    color: black
+    color: var(--primary-text-color)
 }
 .google-sign-in{
     position: absolute;
@@ -64,4 +64,13 @@ h2{
     .header_categories{
         display: none
     }
+}
+.header_wrapper{
+    display: flex;
+    
+}
+.display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

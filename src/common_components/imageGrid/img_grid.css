@@ -21,7 +21,7 @@
     height: 350px;
     width: 350px;
     margin: 0 40px 40px 0;
-    box-shadow:1px 2px 2px rgba(0, 0, 0,0.3);
+    box-shadow: var(--primary-box-shadow)
 }
 
 .img-wrap .single-img{
@@ -33,7 +33,7 @@
 }
 
 .img-wrap:hover{
-    box-shadow:5px 7px 9px rgba(0, 0, 0,0.5);
+    box-shadow: var(--hover-box-shadow);
     transition: 0.5s;
     transform: translateY(8px);
 }
@@ -43,6 +43,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+
 background: rgba(0, 0, 0,0.7);
 }
 .backdrop img{
@@ -50,7 +51,7 @@ background: rgba(0, 0, 0,0.7);
     max-width: 60%;
     max-height: 80%;
     margin: 60px auto auto auto;
-    box-shadow: 3px 5px 7px rgba(0, 0, 0,0.8);
+    box-shadow: var(--primary-box-shadow);
     border: 3px solid white;
     border-radius: 6px;
     animation: fadeInAnimationButton 0.5s ease;
@@ -86,6 +87,11 @@ font-weight: bold;
 .like-btn-wrap{
     display: flex;
     justify-content: center;
+}
+.like-button{
+    display: flex;
+    justify-content: end;
+    margin: 10px 0;
 }
 .like-btn{
    
@@ -151,4 +157,5 @@ transform: translate(-50%,-50%);
 }
 .art_wrapper{
     margin-top: 70px;
+    color: var(--primary-text-color);
 }

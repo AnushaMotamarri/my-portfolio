@@ -1,7 +1,7 @@
 .page-content{
     margin: 60px;
     line-height: 1.75;
- 
+    color: var(--primary-text-color);
    
 
 }
@@ -11,7 +11,8 @@
     border-style: dashed;
     border-radius: 5px;
     margin: 10px 0px;
-    background-color: #eee;
+    
+    
 }
 h4{
     margin: 10px 0;

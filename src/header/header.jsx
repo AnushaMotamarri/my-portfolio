@@ -5,11 +5,16 @@ import {useLocation} from 'react-router';
 import { 
     useNavigate
   } from "react-router-dom";
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+  import MenuIcon from '@mui/icons-material/Menu';
+  import CloseIcon from '@mui/icons-material/Close';
 
-export default function Header({hideHeaderButtons=false}) {
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
+export default function Header() {
     const navigate=useNavigate();
+    const [darkMode,setIsDarkMode] = useState(localStorage.getItem("theme")==="dark");
+    console.log(darkMode)
     const [selectedTab,setSelectedTab] = useState('home');
     const {pathname} = useLocation();
     const [isMenuClicked,setIsMenuClicked] = useState(false);
@@ -35,36 +40,64 @@ export default function Header({hideHeaderButtons=false}) {
         }
        
 
-    }, [pathname])
+    }, [pathname]);
+    const setDarkMode =()=>{
+        setIsDarkMode(true);
+        localStorage.setItem("theme","dark")
+        
+    }
+    const setLightMode =()=>{
+        setIsDarkMode(false);
+        localStorage.setItem("theme","light")
+
+        
+    }
+    const toggleTheme = (isDarkTheme) =>{
+        isDarkTheme?setDarkMode():setLightMode()
+    }
+    useEffect(()=>{
+        if(darkMode){
+            document.querySelector('body').setAttribute('data-theme','dark')
+        }
+        else{
+            document.querySelector('body').setAttribute('data-theme','light')
+        }
+    },[darkMode])
     return (
         <div className="header_wrapper">
-           <div to="/" className="header_item">Anusha</div> 
-           {!hideHeaderButtons&& <div className="header_categories">
-              {(Object.keys(HeaderDetails)||[]).map((name)=>{
-                 return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
-                     { HeaderDetails[name].label}
-                  </div>
+           <div to="/" className="header_item">Anusha Motamarri.</div> 
+           <div className='display-flex'>
+           {!darkMode&&<DarkModeIcon onClick={()=>toggleTheme(true)}/>}
+            {darkMode&& <LightModeIcon onClick={()=>toggleTheme(false)}/>}
+             <div className="header_categories">
+                {(Object.keys(HeaderDetails)||[]).map((name)=>{
+                    return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
+                        { HeaderDetails[name].label}
+                    </div>
 
-              })}
-           </div>}
-           {!hideHeaderButtons&&isMenuClicked&& <div className="header_categories_hamburger">
-              {(Object.keys(HeaderDetails)||[]).map((name)=>{
-                 return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
-                     { HeaderDetails[name].label}
-                  </div>
+                })}
+            </div>
+            {isMenuClicked&& <div className="header_categories_hamburger">
+                {(Object.keys(HeaderDetails)||[]).map((name)=>{
+                    return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
+                        { HeaderDetails[name].label}
+                    </div>
 
-              })}
-           </div>}
-           <div className="hamburger_navbar">
-           {isMenuClicked?
-               <div className={`header_item header_item_signIn`}>
-               <CloseIcon onClick={()=>setIsMenuClicked(false)}/>
+                })}
+            </div>}
+            <div className="hamburger_navbar">
+            {isMenuClicked?
+                <div className={`header_item header_item_signIn`}>
+                <CloseIcon onClick={()=>setIsMenuClicked(false)}/>
+            </div>
+                :
+                <div className={`header_item header_item_signIn`}>
+                    <MenuIcon onClick={()=>setIsMenuClicked(true)}/>
+                </div>} 
+            </div>
+          
            </div>
-              :
-             <div className={`header_item header_item_signIn`}>
-                  <MenuIcon onClick={()=>setIsMenuClicked(true)}/>
-              </div>} 
-           </div>
+          
           
           
         </div>
