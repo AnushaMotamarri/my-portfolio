@@ -65,7 +65,7 @@ export default function Header() {
     },[darkMode])
     return (
         <div className="header_wrapper">
-           <div to="/" className="header_item">Anusha</div> 
+           <div to="/" className="header_item">Anusha Motamarri.</div> 
            <div className='display-flex'>
            {!darkMode&&<DarkModeIcon onClick={()=>toggleTheme(true)}/>}
             {darkMode&& <LightModeIcon onClick={()=>toggleTheme(false)}/>}
