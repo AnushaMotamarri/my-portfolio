@@ -1,6 +1,6 @@
 import React from 'react'
 import LikeButton from '../art/likeButton'
-
+import './writing.css'
  export default function StoryCard({card,setSelectedStory}) {
     return ( 
         <div className="story_card_wrapper" onClick={()=>setSelectedStory(card)}>

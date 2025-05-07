@@ -151,4 +151,5 @@ transform: translate(-50%,-50%);
 }
 .art_wrapper{
     margin-top: 70px;
+    color: var(--primary-text-color);
 }

@@ -1,9 +1,6 @@
 import React from 'react'
 import homePageImage from '../images/home_page_logo2.jpeg';
-// import freebiesImage from '../images/lord_krishna.jpeg';
-// import commissionsImage from '../images/commissions.png';
-// import workImage from '../images/work.png';
-// import writingsImage from '../images/abdulkalam.png'
+
 import './home.css'
 import {useNavigate} from 'react-router';
 function Home() {
@@ -50,7 +47,7 @@ function Home() {
         <div className="landing_page_container">
             <div className="landing_page">
                 <div className="landing_page__img">
-                    <img src={homePageImage} className="home_page_logo" alt=""/>
+                    <img  src={homePageImage} className="home_page_logo" alt=""/>
                 </div>
                <div className="landing_page__info">
                    <p className="landing_page__text">

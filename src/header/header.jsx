@@ -8,9 +8,12 @@ import {
   import MenuIcon from '@mui/icons-material/Menu';
   import CloseIcon from '@mui/icons-material/Close';
 
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
 export default function Header({hideHeaderButtons=false}) {
     const navigate=useNavigate();
+    const [darkMode,setIsDarkMode] = useState(false);
     const [selectedTab,setSelectedTab] = useState('home');
     const {pathname} = useLocation();
     const [isMenuClicked,setIsMenuClicked] = useState(false);
@@ -36,36 +39,53 @@ export default function Header({hideHeaderButtons=false}) {
         }
        
 
-    }, [pathname])
+    }, [pathname]);
+    const setDarkMode =()=>{
+        setIsDarkMode(true);
+        document.querySelector('body').setAttribute('data-theme','dark')
+    }
+    const setLightMode =()=>{
+        setIsDarkMode(false);
+        document.querySelector('body').setAttribute('data-theme','light')
+    }
+    const toggleTheme = (isDarkTheme) =>{
+        isDarkTheme?setDarkMode():setLightMode()
+    }
     return (
         <div className="header_wrapper">
            <div to="/" className="header_item">Anusha</div> 
-           {!hideHeaderButtons&& <div className="header_categories">
-              {(Object.keys(HeaderDetails)||[]).map((name)=>{
-                 return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
-                     { HeaderDetails[name].label}
-                  </div>
+           <div className='display-flex'>
+           {!darkMode&&<DarkModeIcon onClick={()=>toggleTheme(true)}/>}
+            {darkMode&& <LightModeIcon onClick={()=>toggleTheme(false)}/>}
+            {!hideHeaderButtons&& <div className="header_categories">
+                {(Object.keys(HeaderDetails)||[]).map((name)=>{
+                    return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
+                        { HeaderDetails[name].label}
+                    </div>
 
-              })}
-           </div>}
-           {!hideHeaderButtons&&isMenuClicked&& <div className="header_categories_hamburger">
-              {(Object.keys(HeaderDetails)||[]).map((name)=>{
-                 return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
-                     { HeaderDetails[name].label}
-                  </div>
+                })}
+            </div>}
+            {!hideHeaderButtons&&isMenuClicked&& <div className="header_categories_hamburger">
+                {(Object.keys(HeaderDetails)||[]).map((name)=>{
+                    return <div onClick={()=>onTabSelect(name)} className={`header_item header_item_${name} ${name===selectedTab?'active':'inactive'}`} key={name}>
+                        { HeaderDetails[name].label}
+                    </div>
 
-              })}
-           </div>}
-           <div className="hamburger_navbar">
-           {isMenuClicked?
-               <div className={`header_item header_item_signIn`}>
-               <CloseIcon onClick={()=>setIsMenuClicked(false)}/>
+                })}
+            </div>}
+            <div className="hamburger_navbar">
+            {isMenuClicked?
+                <div className={`header_item header_item_signIn`}>
+                <CloseIcon onClick={()=>setIsMenuClicked(false)}/>
+            </div>
+                :
+                <div className={`header_item header_item_signIn`}>
+                    <MenuIcon onClick={()=>setIsMenuClicked(true)}/>
+                </div>} 
+            </div>
+          
            </div>
-              :
-             <div className={`header_item header_item_signIn`}>
-                  <MenuIcon onClick={()=>setIsMenuClicked(true)}/>
-              </div>} 
-           </div>
+          
           
           
         </div>
