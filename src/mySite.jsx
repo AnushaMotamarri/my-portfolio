@@ -20,14 +20,11 @@ import Products from './products/products';
 export default function MySite() {
     return (
         <Router>
-     
-  
-          
           <Routes>
             <Route path="/home" element={
             <>
              <Header/>
-                <Home /></>
+            <Home /></>
            
           }>
               

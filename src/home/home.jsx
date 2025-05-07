@@ -18,7 +18,7 @@ function Home() {
         route:'/art'
     },
     {
-        imgUrl:"https://firebasestorage.googleapis.com/v0/b/portfolio-459b3.appspot.com/o/commissions.png?alt=media&token=e308dd38-6d1b-41cc-be51-505b4731bcc5",
+        imgUrl:"https://firebasestorage.googleapis.com/v0/b/portfolio-459b3.appspot.com/o/commission-small.png?alt=media&token=93de4e80-4397-487a-bdbe-34a33b281984",
         heading:'Commissions',
         text:'It all began back in college, when a Facebook friend asked me to illustrate a portrait of her father. The idea of creating art for someone—and being paid for it—was entirely new to me. I initially refused to charge her, but she insisted, and I consider myself lucky to have had such a thoughtful first client.That portrait sparked something. Soon, more friends from college reached out, asking for custom sketches—some for themselves, others as heartfelt gifts for their loved ones.Since then, I’ve been happily accepting commissions and creating personalized artwork.',
         showOrderButton:true,
